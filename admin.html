@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+
+    <header class="header-main">
+        <div class="container">
+            <div class="header-part">
+                <a class="site-link" href="./index.html">Men's
+                    <span class="site-link-part">Clothes</span>
+                </a>
+                <nav class="site-nav">
+                    <ul class="header-list">
+                        <li class="header-item">
+                            <a class="header-item-link" href="./index.html">Home
+                            </a>
+                        </li>
+                        <li class="header-item">
+                            <a class="header-item-link" href="./admin.html">Admin
+                            </a>
+                        </li>
+                        <li class="header-item">
+                            <a class="header-item-link" href="./order.html">Order
+                            </a>
+                        </li>
+                    </ul>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="admin-main">
+        <div class="container">
+            <h2 class="admin-main-title">Admin Page</h2>
+            <div class="admin-main-part">
+                <form class="admin-form">
+                    <label class="admin-product-label">Product name
+                        <input class="product-name admin-product-inputs" type="text" placeholder="Enter product name"
+                            required>
+                    </label>
+                    <label class="admin-product-label">
+                        Product description
+                        <input class="product-desc admin-product-inputs" type="text"
+                            placeholder="Enter product description" required>
+                    </label>
+                    <label class="admin-product-label">
+                        Product price
+                        <input class="product-price admin-product-inputs" type="number"
+                            placeholder="Enter product price" required>
+                    </label>
+                    <label class="admin-product-label">
+                        Product image
+                        <input class="profuct-img admin-product-inputs" type="file" required>
+                    </label>
+                    <button class="product-send-btn" type="submit">Send</button>
+                </form>
+                <ul class="admin-product-list"></ul>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-part">
+                <a class="site-link" href="./index.html">Men's
+                    <span class="site-link-part">Clothes</span>
+                </a>
+                <p class="site-dev-name footer-text">This site build by Sayramov Azizbek</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="admin-product-modal">
+        <div class="admin-product-modal-box">
+            <form class="admin-product-change-form">
+                <label class="admin-product-change-label">Enter product's name
+                    <input class="admin-change-product-name admin-product-change-inputs" type="text"
+                        placeholder="Enter product name">
+                </label>
+                <label class="admin-product-change-label">Enter product's description
+                    <input class="admin-change-product-desc admin-product-change-inputs" type="text"
+                        placeholder="Enter product description">
+                </label>
+                <label class="admin-product-change-label">
+                    Enter product price
+                    <input class="admin-change-product-price admin-product-change-inputs" type="text"
+                        placeholder="Enter product price">
+                </label>
+                <input class="admin-change-product-img admin-product-change-inputs" type="file">
+                <button class="admin-change-product-btn" type="submit">Change</button>
+                <button class="admin-change-close-btn" type="button"></button>
+            </form>
+        </div>
+    </div>
+
+    <template class="admin-product-template">
+        <li class="admin-product-item">
+            <img class="admin-product-img" src="" alt="">
+            <h3 class="admin-product-title"></h3>
+
+            <p class="admin-product-desc"></p>
+            <p class="admin-product-price"></p>
+            <div class="admin-product-btn-box">
+                <button class="admin-product-edit-btn admin-product-btns" type="button"
+                    title="Edit product">Edit</button>
+                <button class="admin-product-delete-btn admin-product-btns" type="button"
+                    title="Delete product">Delete</button>
+            </div>
+        </li>
+    </template>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>

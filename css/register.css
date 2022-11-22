@@ -1,0 +1,53 @@
+.register-body {
+    background-color: #f5f5f5;
+}
+
+.register {
+    padding-top: 80px;
+}
+
+.register-part-title {
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.register-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.register-input {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.register-btn-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.register-btn {
+    padding: 8px 40px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #008000;
+    border: none;
+    border-radius: 10px;
+}
