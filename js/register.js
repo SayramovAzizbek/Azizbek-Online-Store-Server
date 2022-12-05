@@ -11,7 +11,7 @@ registerForm.addEventListener("submit", (evt) => {
   let registerEmailInputValue = registerEmailInput.value;
   let registerPasswordInputValue = registerPasswordInput.value;
 
-  fetch("http://192.168.0.106:5000/user/register", {
+  fetch("http://192.168.0.148:5000/user/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -15,7 +15,7 @@ if (!loginToken) {
 
 async function mainProductRender() {
   try {
-    const res = await fetch("http://192.168.0.106:5000/product", {
+    const res = await fetch("http://192.168.0.105:5000/product", {
       headers: {
         Authorization: loginToken,
       },
@@ -25,19 +25,11 @@ async function mainProductRender() {
     let productFragment = document.createDocumentFragment();
     data.forEach((item) => {
       let cloneProductTemplate = productTemplate.cloneNode(true);
-      cloneProductTemplate.querySelector(
-        ".product-img"
-      ).src = `http://192.168.0.106:5000/${item.product_img}`;
-      cloneProductTemplate.querySelector(".product-title").textContent =
-        item.product_name;
-      cloneProductTemplate.querySelector(".product-desc").textContent =
-        item.product_desc;
-      cloneProductTemplate.querySelector(
-        ".product-price"
-      ).textContent = `${item.product_price}$`;
-      cloneProductTemplate.querySelector(
-        ".product-buy-btn"
-      ).dataset.savedProductId = item.id;
+      cloneProductTemplate.querySelector(".product-img").src = `http://192.168.0.105:5000/${item.product_img}`;
+      cloneProductTemplate.querySelector(".product-title").textContent = item.product_name;
+      cloneProductTemplate.querySelector(".product-desc").textContent = item.product_desc;
+      cloneProductTemplate.querySelector(".product-price").textContent = `${item.product_price}$`;
+      cloneProductTemplate.querySelector(".product-buy-btn").dataset.savedProductId = item.id;
 
       productFragment.appendChild(cloneProductTemplate);
     });
@@ -49,7 +41,7 @@ async function mainProductRender() {
 mainProductRender();
 
 function orderPost(orderID) {
-  fetch("http://192.168.0.106:5000/order", {
+  fetch("http://192.168.0.105:5000/order", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -69,8 +61,6 @@ productList.addEventListener("click", function (evt) {
     if (!orderedList.includes(cardSavedProductId)) {
       orderedList.push(cardSavedProductId);
     }
-    console.log(cardSavedProductId);
     orderPost(cardSavedProductId);
-    console.log(orderedList);
   }
 });

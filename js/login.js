@@ -14,7 +14,7 @@ loginForm.addEventListener("submit", (evt) => {
   let loginEmailInputValue = loginEmailInput.value;
   let loginPasswordInputValue = loginPasswordInput.value;
 
-  fetch("http://192.168.0.106:5000/user/login", {
+  fetch("http://192.168.0.148:5000/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -13,15 +13,7 @@ if (!loginToken) {
   window.location.pathname = "login.html";
 }
 
-// let orderFragment = document.createDocumentFragment();
-// let cloneOrderTemplate = orderTemplate.cloneNode(true);
-// productList.addEventListener("click", (evt) => {
-//   if (evt.target.matches(".product-buy-btn")) {
-//     let savedProductItem = evt.target.dataset.savedProductId;
-//   }
-// });
-
-fetch("http://192.168.0.106:5000/order", {
+fetch("http://192.168.0.148:5000/order", {
   headers: {
     "Content-Type": "application/json",
     Authorization: loginToken,
